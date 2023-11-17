@@ -24,13 +24,13 @@ namespace BASE_RFID_TMS.Areas.HelpPage.Controllers
         }
 
         public HttpConfiguration Configuration { get; private set; }
-
+        [ValidateAntiForgeryToken]
         public ActionResult Index()
         {
             ViewBag.DocumentationProvider = Configuration.Services.GetDocumentationProvider();
             return View(Configuration.Services.GetApiExplorer().ApiDescriptions);
         }
-
+        [ValidateAntiForgeryToken]
         public ActionResult Api(string apiId)
         {
             if (!String.IsNullOrEmpty(apiId))
@@ -44,7 +44,7 @@ namespace BASE_RFID_TMS.Areas.HelpPage.Controllers
 
             return View(ErrorViewName);
         }
-
+        [ValidateAntiForgeryToken]
         public ActionResult ResourceModel(string modelName)
         {
             if (!String.IsNullOrEmpty(modelName))
