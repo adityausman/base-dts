@@ -8,6 +8,7 @@ namespace BASE_RFID_TMS.Controllers
 {
     public class HomeController : Controller
     {
+        [ValidateAntiForgeryToken]
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
