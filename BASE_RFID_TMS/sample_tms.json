@@ -1,0 +1,12 @@
+{
+	"metadata": {
+		"message": "OK",
+		"code": 1
+	},
+	"response": {
+		"fleetID": "RTP0160",
+		"lastUpdate": "05/24/2023",
+		"odometer": 211642,
+		"hourmeter": 9072
+	}
+}

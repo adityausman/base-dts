@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description>
+  </Description>
+  <Author>
+  </Author>
+  <PageHeight>9.5in</PageHeight>
+  <PageWidth>12in</PageWidth>
+  <Width>7.5in</Width>
+  <TopMargin>.25in</TopMargin>
+  <LeftMargin>.25in</LeftMargin>
+  <RightMargin>.25in</RightMargin>
+  <BottomMargin>.25in</BottomMargin>
+  <DataSets>
+    <DataSet Name="Data">
+      <Query >
+        <DataSourceName>DS1</DataSourceName>
+        <CommandText>SELECT TOP 10 * FROM SPOOL_TRACKING</CommandText>
+      </Query>
+      <Fields >
+        <Field Name="project_code">
+          <DataField>project_code</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="spool_no">
+          <DataField>spool_no</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="date_created">
+          <DataField>date_created</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="joint_no">
+          <DataField>joint_no</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="location_id">
+          <DataField>location_id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="process_id">
+          <DataField>process_id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rfid">
+          <DataField>rfid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="date_modified">
+          <DataField>date_modified</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="status">
+          <DataField>status</DataField>
+          <rd:TypeName>System.Byte</rd:TypeName>
+        </Field>
+        <Field Name="process_name">
+          <DataField>process_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="userid">
+          <DataField>userid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="code">
+          <DataField>code</DataField>
+          <rd:TypeName>System.Byte</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <PageHeader>
+    <Height>46.1pt</Height>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <ReportItems>
+      <Textbox Name="Textbox14" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>13.53pt</Height>
+        <Width>833.83pt</Width>
+        <Value>Spool Tracking</Value>
+        <Left>3.8pt</Left>
+        <Top>26.0pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontSize>12pt</FontSize>
+          <FontWeight>Bold</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>1pt</PaddingLeft>
+          <FontFamily>Arial</FontFamily>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+      </Textbox>
+    </ReportItems>
+  </PageHeader>
+  <Body>
+    <Height>199.2pt</Height>
+    <Columns>1</Columns>
+    <ReportItems >
+      <Table Name="Table1">
+        <DataSetName>Data</DataSetName>
+        <NoRows>Query returned no rows!</NoRows>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <Height>23.1pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox1">
+                      <Value>spool_no</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox2">
+                      <Value>joint_no</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox3">
+                      <Value>location_id</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox4">
+                      <Value>process_name</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox5">
+                      <Value>date_modified</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <Height>12 pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox6">
+                      <Value>=Fields!spool_no.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox7">
+                      <Value>=Fields!joint_no.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox8">
+                      <Value>=Fields!location_id.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox9">
+                      <Value>=Fields!process_name.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox10">
+                      <Value>=Fields!date_modified.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <Height>12 pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox11">
+                      <Value>
+                      </Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox12">
+                      <Value>
+                      </Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox15">
+                      <Value>
+                      </Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox16">
+                      <Value>
+                      </Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox17">
+                      <Value>
+                      </Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <Left>15.06pt</Left>
+        <Top>16.43pt</Top>
+      </Table>
+    </ReportItems>
+  </Body>
+  <PageFooter>
+    <Height>23.3pt</Height>
+    <ReportItems>
+      <Textbox Name="Textbox13" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Top>0.0pt</Top>
+        <Left>482.7pt</Left>
+        <Height>13.50pt</Height>
+        <Width>350.80pt</Width>
+        <Value>='Halaman ' + Globals!PageNumber + ' dari ' + Globals!TotalPages + ' Halaman'</Value>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <FontWeight>Normal</FontWeight>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontFamily>Arial</FontFamily>
+          <TextAlign>Right</TextAlign>
+          <PaddingRight>0pt</PaddingRight>
+          <Direction>RTL</Direction>
+          <WritingMode>lr-tb</WritingMode>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <DataElementName>Report</DataElementName>
+  <DataElementStyle>AttributeNormal</DataElementStyle>
+  <EmbeddedImages>
+    <EmbeddedImage Name="LogoInstansi">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAJwAAAD1CAYAAAClQ5zfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAALiMAAC4jAXilP3YAABPJSURBVHhe7Z1NqB3lGcezKYVSTfCjdFWzFG3aRPNBNdXbUir0w0aNibGpRCqp394mMR+Sxqsm5t6AENAWC0pTKrRdaFPpomgXCUJxl9hdwYW7gpuKCykEc/r8T+a9mTPnP+/MnHm/5138yL3PzD1nzry/zMz/eeecs2I0GmVm5N9L1+9i9Uw9tJhphwj3kbCKLctwaHHIiEBzwha2rIyss1oYtVx3rZCPhgItDplCjk8E7ZELAgkQ7iRbXkbWOS/MsWVDgxaHTiHSabZMIctPFeudZ8sVsnyhWC8LJ9Di0CkEAbWnS1mGo6Bajx4NpY6jpVpnLVtnaNDi0BE5lEz01Ap5iuUKKqbUcSodr1NdNlRoMVVk4OeF1WxZGVnnjBJFmDq1Sg2Po5aDU2QddSodU11eRdZZhb9hy1KCFlNFBnSLgKOWNlnK8rJwYGJ9+f10ZflHleXVI6CULy+vUqyPFss8W54StJgyxcBCgtp0Kcuqwk2cWovfy8vB8pFTfl4+lRacUcuqyDKVdunpOzVoMWVKAzwWgQ2y1CZOhwXjU6v8O3X0Khj32eRf9rdTwkkNp1CVdMHUaTlFaDFlioEuH6Hw80TLQn5n0gCckqvXbwrIUyfjhHDyO9arHgUbry1TgBZTRwb3ZGWwwfL1k/xcJxzkrIqiwKm6btny6Vt+VteR5eW1p9zUoMXUkQFW01JVEAZwBIQUbPmsjNOn/MtEB43TY6lAi0NABrmaNBXjtFip9QWi1R4Z2falCi3GjAwgRGrst8lyTNIzAVyjbYXIchxxEXRwjRj9dR4txowMCi7I1TUS5MNg1U09qRaJL7CdLCUrycpH4STmYmkxdmRwytIppuQrfi+v45pymGCSKZK5tYkWU0AGSXfKVPIhPFTFdAmeHwGl3I+rktR9dLSYChisyuAxfAmH52167sZ77WKDFlNCBs33aXNWkpx5oMXUkMGr63+FSrLTXLSYIhjEyqCGivYO4tihxVSRwQxdOjSHk75jhBZTBYNZDCobbN8kLxugxViQAWJ3XQwFNK2jm4OlxdiQHY8k6nvWwBVopUR7KzotxgoGohgQNlApgLQd9WmXFmMGA1IMDBuwWEli4h7QYgpggIqBYgMYC7gFPqk3UNNiSmDAioFjAxoquB5N8p36tJgiMoCxnGbpG3tSgRZTQQYORzecVmMLEthebHdyt56v+M3ixvm/nVj7n5eOb7qOrRAbMkjozeFolkqbJHr5nthz/5pTB+/89NDe+14ZC4cXdnZpzWexSifbj4CAlkjqvTi8PvxniuaDcSDbu0fmPsf2TwgHPli64eLLixu3sz8MDdletD+w7UOeaYB8wbZL9u3ZcUDJBqaEA5AONfYAISHbCuFwjYbtx47HxXbKTV8FXidOsTii4/UHGTAg27ljN01sOxVO8frihtfYA4WObDtOrxgIDAgGJraWiAJHbtwKr8SKpvF7dO+2s7K9U69JKxz489LN59gDxoi8nhgm+nGEjrr/dvLpe2qvoxuFA28trfuQPXBMyOuI6a6SaKVDEq28lglaCQciT7DsszxiIJrPikMSPX34+xfIa5igtXAA0sWSYBWy3bj+oa8nEnANGvSsw/yeHVvLSVRHJ+FALG0T2VYk2FjDQhVcCgQZGFgS1dFZOADpQk6wso24XkutAYxLgqBmGp7du/3NLrKBmYRT/H5p/V/YhvhEtgt3/jZdr6l2Q0jXddieNkfkIO70rWt7NNFLOBBSgpXtwfVOefswgKqPheCwPB1U/F5e1zfLIsnPTX1EvCZv13VNSVRHb+FACBP/sh0QqFWDVJbj+i7E1KqdH5Xl5ZkV56dXNQEvz822vRVGhAMxtU1ke3GEoK/DM8G+Abo8Ad8HY8KBGBKsbCeOEHT7AyG4d2Mhib63cCvb1s4YFQ5Aut8ubjjONtw3sn04JenSq6tkq3senOqDaYFAkK5JVIdx4RQhtk1ku+puMYcASLeuPmVJXWvWpdIgPtF81iSqw5pwIKSJf9kediodi1Zap05I0ywLJT8j7LAjntdpLd0EfB+sCgfQNgkhTMi2lHcgTls4yky0FuT3usl944m2/LzFc1c/OQDP6aX10TeJ6rAuHPCdYGUbIBe2hYpWrIPru6ltL5i1Z4f9WicrvRtE6tg+9TfaLwg2jakkqsOJcMDXxL88N6a5sA2nhNqLcVlWJ5X6/iy2DCiZGWjg4vmZdLVpVJZBfiWek35blwn4PjgTDvhom8jz4lTVmPpkHXb9Vr6+Y9c04y/0kH/pxX/pb5X0ZRqDgawD8ax/xm/XCfg+OBVOEWiCrV6/TXxyuPzOpBpf2Mu/tLdX+fupBFxe7gskUVeygbFw24/e9qM/Ld5MV7BFSBP/sj3V6zf27c5V4XC6W74WlJ+rR8CprzOSWlU6r3f12mh76HjzwI9Hmx995NCKK5/7zpww+t3ierqiLUKZ+JdtKV+/0Q9zlnr1lDtxqpPfqzLRU2ZlPW+zCjaTKOPVp346+sJPjo+u3j0/vywcOHF8E/0DW7x74pv/DWDiX8lU+8nhsqwaDqauC6VWDge112iyTD2f8wYvkugfD/3gf8XzO+Glx3aNZaPCgf0v3kL/0BZIsCePb9rMdpALZBtw/aYdfFleFq7uKFheR3uxj8fAetW6TVy0Pao8/uBTy7LVCgceOPbt0fmlG+iD2MDXxL88N67fIJy2ySrLy6fduh5a+Vqw8XQp60A6J9dxJifg23Du6M1TsmmFA3cfvc25dK4n/uV5IUljR1/WUUm06Ug4PnIJra7PZD3rE/VIhi6TKGS7Y/vhKdkahQPffeH20T+WvkEf2BaBtk2UcNovWpPlaPZivSDeV+o6ib63sLlWNtAoHLj+hTnn0oX45mvZrlbf3CzroYXiXbhX99/1sdqfLvj74e+Nvnb3USqaopVwANL5aJuEdBexbJP26KaQ9XA09PpxWq7bHn/Yu7VRNtBaOIVr6WK6dT0EfCRR1WNrQ2fhwMKL36JPbIv3l268EMObr32DJOpatucf3k3FqmMm4YDrXl0M75fwicsJeAVrezQxs3DAda8OxPqZdTZxPQGPtseun+2jQjXRSzjgulcH3lhc73xKKFRO7Lv3X2wf2ULXY2tDb+GAj15diG0T17hOomh79JENGBEO+OjVhTDx7wMfE/BtemxtMCacwkfbxOfEv2t8tD3a9tjaYFw44Fq6oSRYH0m0S4+tDVaEAz7aJikn2Fk+i60vXXtsbbAmHHAtHUhROtcT8GCWHlsbrAoHfLRNUkqwrifg0fbYev9BKosJrAsHfEgX+5fVIRy4bnv07bG1wYlwwEfbJNaJfx9JFG2PjVsXqCQmcSYc8CFdbBP/PibgTfXY2uBUOIWPtgne7M0GOCR8tT1cyQa8CAdcSwdCTrA+kqjpHlsbvAkHfLRNQpz4dz0BD/Y/9BgVwjZehQOQbshtE9dJFNjqsbXBu3DAR9vEd4JFEm3zZWgmsd1ja0MQwgFI98+lr9MdZQtI5yPB+mh7uOixtSEY4YCPtonriX8fSdRVj60NQQkHIN3bJ9bRHWcLVxP/PibgXfbY2hCccAofbRObn1k3lLZHE8EKB369uJHuSJvYSLA+kmiIsoGghQM+enWmJv59TMADn22PJoIXDvjo1fVtm/hIoiBk2UAUwgEfvbpZEyySqMvPYgOhtD2aiEY44KNX13Xi30fbIxbZQFTCAR+9OtCmbeIjiYbW9mgiOuGAj14d0H1Zna0vQ9MRm2wgSuEUPnp1rG2S2x7tiVo44Ppj/oFKsD4m4EGssoHohQM+enWQ7p0jcxfZMpuE3vZoIgnhwKPHNjtvm7gmdtlAMsIBH706F8TU9mgiKeEApPPRNrFF08fQx0ZywgFfvTrTxNj2aCJJ4QCkc/2VnCbBVz2mJhtIVjiFj15dX2JuezSRvHDAR69uVspf9ZgigxAO+OjVdSWFtkcTgxEOhNqrQ9tjCLKBQQkHQuvVpdRja8PghAM+PuafkVqPrQ2DFA747tWl2GNrw2CFA5DOR9sk1R5bGwYtnMKldCn32NqQhStw8ZWcNj6GPjaycCVs3raO0ygbgKGRhSuRhbNPFq5EFs4+WbgSWTj7ZOFKZOHsk4UrkYWzTxauRBbOPlm4Elk4+2ThSmTh7JOFK5GFs08WrkQWzj5ZuBJvH99AZTFBFu4SWbiCVT/fMzq9cDuVxQRZuEtk4QTIhp2RhbPP4IVTsoEsnH0GLVxZNpCFs88ghbvi2TtGV+7aP7UzsnD2GZxwkO2KHb+iOyMLZ59BCaeTDWTh7DMY4ZpkA1k4+wxCuDaygSycfZIXbuXhH7aSDWTh7JO0cNccumv0xXvav+E4C2cXtKFkXOaSFK6rbCALZ4+rdj+pxiY94WaRDWTh7HD1/IPl8UlLuFllA1k4s2Acvvr0tuoYpSNcH9lAFs4cX9723Hg8yDilIRwO231kA1k4M6ArMJ4+JOMkxC8cZGMvvCtZuP5gjlojG4hbOFOygSxcP4q2RxPxCmdSNpCFm51KEtURp3CmZQNZuO7guvnaPTvpGNUQn3BfeeRR+uL7koXrBmSrSaI64hKuepeuSbJw7UESxTw1G6MG4hHOpmwgC9eOlTufaUqiOuIQzrZsIAvXTMskqiN84VzIBrJweq59fDcdn46ELZwr2UAWrp4ObY8mwhSu7V26JsnCTTNjEtURnnA+ZANZuEkwBoZlA2EJ50s2kIW7DMagRxLVEY5wPmUDWbhL4LrZkmwgDOF8ywaycBO3gtvCv3C4TsANe2wHuGTowhlMojr8C4fbkNkOcM1QhUMSJbeC2yKMU6rLflsdQxTOQtujiXCu4fDi2U5xxdCEs5hEdYQhHMDUCdsxrhiScC1uBbdFOMKB3Baxj4EJ+D6EJZzPADEE4RwlUR1hCQd8BYiUhcP1cQCygfCE8xUgUhXOQxLVEZ5wwEeASFE4XBPPeCu4LcIUDrgOEKkJ1/NWcFuEK5zrAJGScJ6TqI5whQMuA0QqwuFtlGxfBkLYwrkMECkIh9Mo248BEbZwwFWAyMI5IXzhgIsAkYVzQhzCuQgQWTgnxCEcsB0gsnBOiEc42wEiC+eEeIQDNgNEFs4JcytGoxGkO1lZECy2AkQWzjqn4NpYuEK6XZUVgsRWgMjCWWWX8mxZuEI6nF4/Ka0YJuQLdvuShbMCXNpSdmxCOCArrBU+Kv4gSHAHhOkAkYUzDmRbW/Vr4heFrLhKOF/8YZCY/ujVLJxR4M4q5tZUQYE/EE4VDxAkJt9AnYUzxmmBygZosYz8cbAJ1mSAyMIZYZxEddBiFXmgcBOsoQCRhevNchLVQYsMecAgE6ypAJGFm5mpJKqDFuuQB0aCDU46EwEiCzcTNInqoEUd8gRBJti+ASIL1xk4sJo5ooMWm5AngnRII2xDvNA3QGThOnFGqE2iOmixLfKkYbVNegSILFxrGpOoDlrsgmxAMAm2T4DIwrVinjnQBVrsimzIFiGIMDFrgMjCacHYtmp7NEGLsyAbFEyCnSVAZOFq6ZxEddDirMiGBZFgZwkQWTjKTElUBy32QTYwjATbMUBk4aaYOYnqoEUTyMZ6TbBdA0QWboJeSVQHLZpCNtxrgu0SILJwy/ROojpo0STyArwm2LYBIgtnLonqoEXTyAvxlmDbBoiBC2c0ieqgRRvIC/KXYFsEiAELZzyJ6qBFW8gL85JgESDYAJUZqHBWkqgOWrSNvEjnCbYpQAxQOGtJVActukBesNMEi4+K0AWIgQlnNYnqoEVXyAt3mmCv3bOTDhQYiHBOkqgOWnSJ7ACnCRaDwgZrAMI5S6I6aNE1siNWC04SbF2ASFw47FvvsgFa9IHsECRYpCa2w4zCAkTCwkE2p0lUBy36RHaO9QTLAkSiwnlJojpo0Teyo+YrO8441QCRoHALbN/6hhZDQHYY2iZWwwQGSA1WYsJ5TaI6aDEUZMdZTbDlAJGCcKt2PnNBXlcQ4aAOWgwJ2YFWE6wKELELd8V9z3521S+e3M72YUjQYmiIGNYSrAoQMQsH2a55+PHr2L4LDVoMFRHESoJFgIhVuJUPHPyQ7atQocWQEUGsJNi/vriJymICW8KtfPDpM2wfhQwtho4IYjzBvn1iHZXFBDaEW/XQL19j+yZ0aDEGRBKjCTYW4b5497GLMYSDOmgxFkQUYwk2BuFiSaI6aDEmRBYjCTZ04WJKojpoMUZEml4JNmThYkuiOmgxVkScmRNsqMLFmER10GLMiDwzJdgQhYs1ieqgxdgRgTon2JCEiz2J6qDFFBCJIF3rBBuKcF+69/kLqcoGaDEVRKTWb74OQbhUkqgOWkwNEaoxwfoWDkk0ddkALaaISLVQlayMT+Gu3HXgHNvmFKHFVBGxat987Uu4FJOoDlpMGZGLJljXwiGJXr173ts74H1Bi6kjgk0lWJfCpZ5EddDiEBDJJhKsK+GGkER10OKQENnGCdaFcENJojpocWiIcAu2hRtSEtVBi0Pk9cUNrzFZTHB077az7DmHCC0OlZcXN27/YOmGi0yaWTh37KbRob33vcKea6jQ4pCBdGeX1nzGBOrCewu3jvbt2XGAPceQocWh89LxTdf1ke7dI3OfP7Hn/jXssYcOLWYu8dbSug+ZUDpOHbzz0yxbPbSYucwbi+vPMLEYr+6/62P2GJnL0GJmkjYJNifRdtBiZpq6BJuTaDdoMcOBdO8v3XihLFtOot2gxUw9KsG+c2TuYg4H3aHFjB5It+vA1lvYsoyO0Yr/A7aSR7hYGn/2AAAAAElFTkSuQmCC</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <DataSources >
+    <DataSource Name="DS1">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Server=NCI-RISET;DataBase=RFID_PIPE_SPOOL;user id=sa;password=NciRiset123
+</ConnectString>
+        <IntegratedSecurity>false</IntegratedSecurity>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+</Report>
